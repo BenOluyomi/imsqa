@@ -1,49 +1,24 @@
-20201118 11:31:03 INFO  [main] ims.IMS IMS.java28 - What is your username
-20201118 11:31:06 INFO  [main] ims.IMS IMS.java30 - What is your password
-20201118 11:31:08 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLException: Can't drop database 'ims'; database doesn't exist
-20201118 11:31:09 INFO  [main] ims.IMS IMS.java36 - Which entity would you like to use?
-20201118 11:31:09 INFO  [main] domain.Domain Domain.java27 - CUSTOMER: Information about customers
-20201118 11:31:09 INFO  [main] domain.Domain Domain.java27 - ITEM: Individual Items
-20201118 11:31:09 INFO  [main] domain.Domain Domain.java27 - ORDER: Purchases of items
-20201118 11:31:09 INFO  [main] domain.Domain Domain.java27 - STOP: To close the application
-20201118 11:31:12 INFO  [main] ims.IMS IMS.java60 - What would you like to do with customer:
-20201118 11:31:12 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201118 11:31:12 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201118 11:31:12 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201118 11:31:12 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201118 11:31:12 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201118 11:31:15 INFO  [main] controller.CustomerController CustomerController.java46 - Please enter a first name
-20201118 11:31:21 INFO  [main] controller.CustomerController CustomerController.java48 - Please enter a surname
-20201118 11:31:25 INFO  [main] controller.CustomerController CustomerController.java51 - Customer created
-20201118 11:31:25 INFO  [main] ims.IMS IMS.java60 - What would you like to do with customer:
-20201118 11:31:25 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201118 11:31:25 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201118 11:31:25 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201118 11:31:25 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201118 11:31:25 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201118 11:31:30 INFO  [main] controller.CustomerController CustomerController.java36 - id:1 first name:jordan surname:harrison
-20201118 11:31:30 INFO  [main] controller.CustomerController CustomerController.java36 - id:2 first name:adam surname:pool
-20201118 11:31:30 INFO  [main] controller.CustomerController CustomerController.java36 - id:4 first name:jordan surname:harrison
-20201118 11:31:30 INFO  [main] controller.CustomerController CustomerController.java36 - id:5 first name:alice surname:appleton
-20201118 11:31:30 INFO  [main] ims.IMS IMS.java60 - What would you like to do with customer:
-20201118 11:31:30 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201118 11:31:30 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201118 11:31:30 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201118 11:31:30 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201118 11:31:30 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201118 11:32:24 INFO  [main] controller.CustomerController CustomerController.java78 - Please enter the id of the customer you would like to delete
-20201118 11:32:28 INFO  [main] ims.IMS IMS.java60 - What would you like to do with customer:
-20201118 11:32:28 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201118 11:32:28 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201118 11:32:28 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201118 11:32:28 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201118 11:32:28 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201118 11:32:32 INFO  [main] controller.CustomerController CustomerController.java36 - id:1 first name:jordan surname:harrison
-20201118 11:32:32 INFO  [main] controller.CustomerController CustomerController.java36 - id:2 first name:adam surname:pool
-20201118 11:32:32 INFO  [main] controller.CustomerController CustomerController.java36 - id:5 first name:alice surname:appleton
-20201118 11:32:32 INFO  [main] ims.IMS IMS.java60 - What would you like to do with customer:
-20201118 11:32:32 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201118 11:32:32 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201118 11:32:32 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201118 11:32:32 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201118 11:32:32 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
+20201118 11:39:14 INFO  [main] ims.IMS IMS.java28 - What is your username
+20201118 11:39:16 INFO  [main] ims.IMS IMS.java30 - What is your password
+20201118 11:39:18 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLException: Can't drop database 'ims'; database doesn't exist
+20201118 11:39:18 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLException: Can not issue empty query.
+20201118 11:39:18 INFO  [main] ims.IMS IMS.java36 - Which entity would you like to use?
+20201118 11:39:18 INFO  [main] domain.Domain Domain.java27 - CUSTOMER: Information about customers
+20201118 11:39:18 INFO  [main] domain.Domain Domain.java27 - ITEM: Individual Items
+20201118 11:39:18 INFO  [main] domain.Domain Domain.java27 - ORDER: Purchases of items
+20201118 11:39:18 INFO  [main] domain.Domain Domain.java27 - STOP: To close the application
+20201118 11:39:32 INFO  [main] ims.IMS IMS.java60 - What would you like to do with customer:
+20201118 11:39:32 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
+20201118 11:39:32 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
+20201118 11:39:32 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
+20201118 11:39:32 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
+20201118 11:39:32 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
+20201118 11:39:35 INFO  [main] controller.CustomerController CustomerController.java36 - id:1 first name:jordan surname:harrison
+20201118 11:39:35 INFO  [main] controller.CustomerController CustomerController.java36 - id:2 first name:adam surname:pool
+20201118 11:39:35 INFO  [main] controller.CustomerController CustomerController.java36 - id:5 first name:alice surname:appleton
+20201118 11:39:35 INFO  [main] ims.IMS IMS.java60 - What would you like to do with customer:
+20201118 11:39:35 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
+20201118 11:39:35 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
+20201118 11:39:35 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
+20201118 11:39:35 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
+20201118 11:39:35 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
