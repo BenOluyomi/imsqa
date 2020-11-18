@@ -31,8 +31,37 @@ public class Utils {
 		} while (longInput == null);
 		return longInput;
 	}
+	
+	public Long getItemId() {
+		String input = getString();
+		Long longInput = null;
+		do {
+			try {
+				longInput = Long.parseLong(input);
+			} catch (NumberFormatException nfe) {
+				LOGGER.info("Error - Please enter a number");
+			}
+		} while (longInput == null);
+		return longInput;
+	}
+	public float getItemPrice() {
+		String input = getString();
+		float fInput = 0;
+		do {
+			try {
+				fInput = Float.parseFloat(input);
+			} catch (NumberFormatException nfe) {
+				LOGGER.info("Error - Please enter a number");
+			}
+		} while (fInput == 0);
+		return fInput;
+	}
+	
 
 	public String getString() {
+		return scanner.nextLine();
+	}
+	public String getProductName() {
 		return scanner.nextLine();
 	}
 
