@@ -7,3 +7,8 @@ CREATE TABLE IF NOT EXISTS `customerorders`.`customers` (
     `last_name` VARCHAR(40) NULL DEFAULT NULL,
     PRIMARY KEY (`id`)
 );
+CREATE TABLE IF NOT EXISTS `customerorders`.`items` (
+    `item_id` INT(11) NOT NULL AUTO_INCREMENT,
+    `price` DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY (`item_id`)
+);
