@@ -120,7 +120,7 @@ public class ItemDAO implements Dao<Item> {
 	 * @param id - id of the customer
 	 */
 	@Override
-	public int delete(long id) {
+	public int delete(long id, long item_id) {
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				Statement statement = connection.createStatement();) {
 			return statement.executeUpdate("delete from items where item_id = " + id);

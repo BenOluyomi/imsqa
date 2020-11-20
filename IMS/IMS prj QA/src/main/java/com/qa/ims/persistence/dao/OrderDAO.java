@@ -106,7 +106,7 @@ public class OrderDAO implements Dao<Order> {
 	 * @param id - id of the customer
 	 */
 	@Override
-	public int delete(long order_id) {
+	public int delete(long order_id, long item_id) {
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				Statement statement = connection.createStatement();) {
 			return statement.executeUpdate("delete from orders where order_id = " + order_id);

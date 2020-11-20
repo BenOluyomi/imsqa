@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS `customerorders`.`orders` (
     `order_id` INT(11) NOT NULL AUTO_INCREMENT,
     `id` INT,
     PRIMARY KEY (`order_id`),
-    FOREIGN KEY (`id`) REFERENCES customers(`id`)
+    FOREIGN KEY (`id`) REFERENCES customers(`id`);
 CREATE TABLE IF NOT EXISTS `customerorders`.`order_items` (
     `order_id` INT,
     `item_id` INT,

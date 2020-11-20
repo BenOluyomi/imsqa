@@ -119,7 +119,7 @@ public class CustomerDAO implements Dao<Customer> {
 	 * @param id - id of the customer
 	 */
 	@Override
-	public int delete(long id) {
+	public int delete(long id,long item_id) {
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				Statement statement = connection.createStatement();) {
 			return statement.executeUpdate("delete from customers where id = " + id);
@@ -129,5 +129,7 @@ public class CustomerDAO implements Dao<Customer> {
 		}
 		return 0;
 	}
+
+	
 
 }

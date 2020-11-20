@@ -29,7 +29,7 @@ public class OrderItems{
 
 	@Override
 	public String toString() {
-		return "order_id:" + order_id + " item_id:" + item_id; 
+		return "order_id:" + order_id + " item_id:" + item_id + " quantity:" + quantity; 
 	}
 
 	@Override

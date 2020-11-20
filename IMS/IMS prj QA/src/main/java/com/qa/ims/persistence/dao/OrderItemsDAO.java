@@ -70,7 +70,7 @@ public class OrderItemsDAO implements Dao<OrderItems> {
 	public OrderItems create(OrderItems orderitem) {
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("INSERT INTO order_items(order_id, id,quantity) values('" + orderitem.getOrderId() + "','" +orderitem.getItemId()+  "','" +orderitem.getQuantity()+"')");;
+			statement.executeUpdate("INSERT INTO order_items(order_id, item_id,quantity) values('" + orderitem.getOrderId() + "','" +orderitem.getItemId()+  "','" +orderitem.getQuantity()+"')");;
 			return readLatest();
 		} catch (Exception e) {
 			LOGGER.debug(e);
@@ -107,10 +107,11 @@ public class OrderItemsDAO implements Dao<OrderItems> {
 	 * @param id - id of the customer
 	 */
 	@Override
-	public int delete(long order_id) {
+	public int delete(long order_id, long item_id) {
+		
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				Statement statement = connection.createStatement();) {
-			return statement.executeUpdate("delete from order_items where order_id = " + order_id);
+			return statement.executeUpdate("delete from order_items where order_id = " + order_id +" AND item_id = "+item_id);
 		} catch (Exception e) {
 			LOGGER.debug(e);
 			LOGGER.error(e.getMessage());

@@ -1,48 +1,33 @@
-20201119 11:42:26 INFO  [main] ims.IMS IMS.java40 - What is your username
-20201119 11:42:29 INFO  [main] ims.IMS IMS.java42 - What is your password
-20201119 11:42:30 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLException: Can't drop database 'ims'; database doesn't exist
-20201119 11:42:30 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
-20201119 11:42:30 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
-20201119 11:42:31 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLException: Can not issue empty query.
-20201119 11:42:31 INFO  [main] ims.IMS IMS.java48 - Which entity would you like to use?
-20201119 11:42:31 INFO  [main] domain.Domain Domain.java27 - CUSTOMER: Information about customers
-20201119 11:42:31 INFO  [main] domain.Domain Domain.java27 - ITEM: Individual Items
-20201119 11:42:31 INFO  [main] domain.Domain Domain.java27 - ORDER: Purchases of items
-20201119 11:42:31 INFO  [main] domain.Domain Domain.java27 - STOP: To close the application
-20201119 11:42:33 INFO  [main] ims.IMS IMS.java72 - What would you like to do with order:
-20201119 11:42:33 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201119 11:42:33 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201119 11:42:33 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201119 11:42:33 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201119 11:42:33 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201119 11:42:36 INFO  [main] controller.OrderController OrderController.java46 - Please enter an order id
-20201119 11:42:40 INFO  [main] controller.OrderController OrderController.java48 - Please enter a customer id
-20201119 11:42:43 INFO  [main] controller.OrderController OrderController.java51 - Order created
-20201119 11:42:43 INFO  [main] ims.IMS IMS.java72 - What would you like to do with order:
-20201119 11:42:43 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201119 11:42:43 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201119 11:42:43 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201119 11:42:43 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201119 11:42:43 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201119 11:42:48 INFO  [main] controller.OrderController OrderController.java36 - id:1 id:1
-20201119 11:42:48 INFO  [main] controller.OrderController OrderController.java36 - id:2 id:5
-20201119 11:42:48 INFO  [main] ims.IMS IMS.java72 - What would you like to do with order:
-20201119 11:42:48 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201119 11:42:48 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201119 11:42:48 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201119 11:42:48 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201119 11:42:48 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201119 11:42:57 INFO  [main] controller.OrderController OrderController.java68 - Please enter the id of the item you would like to delete
-20201119 11:43:02 INFO  [main] ims.IMS IMS.java72 - What would you like to do with order:
-20201119 11:43:02 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201119 11:43:02 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201119 11:43:02 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201119 11:43:02 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201119 11:43:02 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201119 11:43:05 INFO  [main] controller.OrderController OrderController.java36 - id:1 id:1
-20201119 11:43:05 INFO  [main] ims.IMS IMS.java72 - What would you like to do with order:
-20201119 11:43:05 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201119 11:43:05 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201119 11:43:05 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201119 11:43:05 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201119 11:43:05 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
+20201120 13:11:12 INFO  [main] ims.IMS IMS.java46 - What is your username
+20201120 13:11:15 INFO  [main] ims.IMS IMS.java48 - What is your password
+20201120 13:11:17 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLException: Can't drop database 'ims'; database doesn't exist
+20201120 13:11:17 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+20201120 13:11:17 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+20201120 13:11:17 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+20201120 13:11:17 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLException: Can not issue empty query.
+20201120 13:11:17 INFO  [main] ims.IMS IMS.java54 - Which entity would you like to use?
+20201120 13:11:17 INFO  [main] domain.Domain Domain.java27 - CUSTOMER: Information about customers
+20201120 13:11:17 INFO  [main] domain.Domain Domain.java27 - ITEM: Individual Items
+20201120 13:11:17 INFO  [main] domain.Domain Domain.java27 - ORDER_ITEMS: Purchases of items
+20201120 13:11:17 INFO  [main] domain.Domain Domain.java27 - ORDER: Purchases of items
+20201120 13:11:17 INFO  [main] domain.Domain Domain.java27 - STOP: To close the application
+20201120 13:11:20 INFO  [main] ims.IMS IMS.java81 - What would you like to do with order:
+20201120 13:11:20 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
+20201120 13:11:20 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
+20201120 13:11:20 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
+20201120 13:11:20 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
+20201120 13:11:20 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
+20201120 13:11:25 INFO  [main] controller.OrderController OrderController.java36 - order_id:1 customer_id:1
+20201120 13:11:25 INFO  [main] controller.OrderController OrderController.java36 - order_id:2 customer_id:5
+20201120 13:11:25 INFO  [main] ims.IMS IMS.java81 - What would you like to do with order:
+20201120 13:11:25 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
+20201120 13:11:25 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
+20201120 13:11:25 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
+20201120 13:11:25 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
+20201120 13:11:25 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
+20201120 13:11:39 INFO  [main] ims.IMS IMS.java54 - Which entity would you like to use?
+20201120 13:11:39 INFO  [main] domain.Domain Domain.java27 - CUSTOMER: Information about customers
+20201120 13:11:39 INFO  [main] domain.Domain Domain.java27 - ITEM: Individual Items
+20201120 13:11:39 INFO  [main] domain.Domain Domain.java27 - ORDER_ITEMS: Purchases of items
+20201120 13:11:39 INFO  [main] domain.Domain Domain.java27 - ORDER: Purchases of items
+20201120 13:11:39 INFO  [main] domain.Domain Domain.java27 - STOP: To close the application

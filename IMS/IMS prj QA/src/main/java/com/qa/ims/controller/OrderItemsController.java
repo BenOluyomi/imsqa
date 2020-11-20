@@ -17,10 +17,10 @@ public class OrderItemsController implements CrudController<OrderItems> {
 
 	public static final Logger LOGGER = LogManager.getLogger();
 
-	private OrderItDAO orderItDAO;
+	private OrderItemsDAO orderItDAO;
 	private Utils utils;
 
-	public OrderItemsController(OrderItDAO orderItDAO, Utils utils) {
+	public OrderItemsController(OrderItemsDAO orderItDAO, Utils utils) {
 		super();
 		this.orderItDAO = orderItDAO;
 		this.utils = utils;
@@ -69,7 +69,15 @@ public class OrderItemsController implements CrudController<OrderItems> {
 	public int delete() {
 		LOGGER.info("Please enter the id of the order you would like to delete");
 		Long order_id = utils.getOrderId();
-		return orderItDAO.delete(order_id);
+		
+		
+		LOGGER.info("Please enter the id of the item you would like to delete");
+		Long item_id = utils.getItemId();
+		
+		return orderItDAO.delete(order_id,item_id);
+		
+		
+		
 	}
 
 	@Override

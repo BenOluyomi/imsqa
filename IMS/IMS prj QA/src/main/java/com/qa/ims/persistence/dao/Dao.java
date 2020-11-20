@@ -12,7 +12,7 @@ public interface Dao<T> {
 
 	T update(T t);
 
-	int delete(long id);
+	int delete(long id, long item_id);
 
 	T modelFromResultSet(ResultSet resultSet) throws SQLException;
 }
