@@ -5,11 +5,13 @@ public class OrderItems{
 	private Long order_id;
 	private Long item_id;
 	private Long quantity;
+	private float cost;
 
 	public OrderItems(Long order_id, Long item_id, Long quantity) {
 		this.order_id = order_id;
 		this.item_id = item_id;
 		this.quantity = quantity;
+		
 	}
 
 
@@ -22,7 +24,7 @@ public class OrderItems{
 	public Long getQuantity() {
 		return quantity;
 	}
-
+	
 	public void setQuantity(Long quantity) {
 		this.quantity = quantity;
 	}

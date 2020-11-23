@@ -22,7 +22,7 @@ public class OrderItemsDAO implements Dao<OrderItems> {
 		Long order_id = resultSet.getLong("order_id");
 		Long item_id = resultSet.getLong("item_id");
 		Long quantity = resultSet.getLong("quantity");
-		
+	
 		return new OrderItems(order_id, item_id, quantity);
 	}
 
