@@ -5,12 +5,13 @@ public class OrderItems{
 	private Long order_id;
 	private Long item_id;
 	private Long quantity;
-	private float cost;
+	private float total_cost;
 
-	public OrderItems(Long order_id, Long item_id, Long quantity) {
+	public OrderItems(Long order_id, Long item_id, Long quantity, float total_cost) {
 		this.order_id = order_id;
 		this.item_id = item_id;
 		this.quantity = quantity;
+		this.total_cost = total_cost;
 		
 	}
 
@@ -24,14 +25,16 @@ public class OrderItems{
 	public Long getQuantity() {
 		return quantity;
 	}
-	
+	public float getTotalCost() {
+		return total_cost;
+	}
 	public void setQuantity(Long quantity) {
 		this.quantity = quantity;
 	}
 
 	@Override
 	public String toString() {
-		return "order_id:" + order_id + " item_id:" + item_id + " quantity:" + quantity; 
+		return "order_id:" + order_id + " item_id:" + item_id + " quantity:" + quantity+ " total_cost:" + total_cost; 
 	}
 
 	@Override

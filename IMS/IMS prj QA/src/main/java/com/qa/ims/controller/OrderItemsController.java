@@ -49,7 +49,8 @@ public class OrderItemsController implements CrudController<OrderItems> {
 		Long item_id = utils.getfId();
 		LOGGER.info("Please enter a quantity");
 		Long quantity = utils.getQuantity();
-		OrderItems orderItems = orderItDAO.create(new OrderItems(order_id, item_id,quantity));
+		float total_cost = utils.getItemPrice();
+		OrderItems orderItems = orderItDAO.create(new OrderItems(order_id, item_id,quantity, total_cost));
 		LOGGER.info("Order created");
 		return orderItems;
 	}
