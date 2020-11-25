@@ -9,12 +9,12 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.qa.ims.persistence.domain.Order;
+import com.qa.ims.persistence.domain.OrderItems;
 import com.qa.ims.utils.DBUtils;
 
-public class OrderDAOTest {
+public class OrderItemDAOTest {
 
-	private final OrderDAO orDAO = new OrderDAO();
+	private final OrderItemsDAO orDAO = new OrderItemsDAO();
 
 	@BeforeClass
 	public static void init() {
@@ -28,16 +28,19 @@ public class OrderDAOTest {
 
 	@Test
 	public void testCreate() {
-		
-		final Order created = new Order((long) 3,(long)3);
+		Long newid = (long) 3;
+		Long norid = (long) 1;
+		final OrderItems created = new OrderItems(newid,norid, norid, (float) 224.97);
 		assertEquals(created, orDAO.create(created));
 	}
 
 	@Test
 	public void testReadAll() {
-		List<Order> expected = new ArrayList<>();
-		expected.add(new Order((long) 1, (long) 1));
-		expected.add(new Order((long) 2, (long) 2));
+		List<OrderItems> expected = new ArrayList<>();
+		Long newida = (long) 1;
+		Long norida = (long) 1;
+		expected.add(new OrderItems(newida, norida, (long) 3, (float) 224.97));
+		expected.add(new OrderItems((long)2, (long)2, (long) 2, (float) 179.98));
 		assertEquals(expected, orDAO.readAll());
 	}
 
@@ -51,18 +54,18 @@ public class OrderDAOTest {
 	@Test
 	public void testRead() {
 		final long ID = 1;
-		assertEquals(new Order(ID, (long) 1), orDAO.readOrder(ID));
+		assertEquals(new OrderItems(ID, (long) 1, ID, ID), orDAO.readOrder(ID));
 	}
 
 	@Test
 	public void testUpdate() {
-		final Order updated = new Order((long) 2, (long) 2);
+		final OrderItems updated = new OrderItems((long) 2, (long) 2, (long) 2,(float)179.98);
 		assertEquals(updated, orDAO.update(updated));
 
 	}
 
 	@Test
 	public void testDelete() {
-		assertEquals(1,1, orDAO.delete(1, 1));
+		assertEquals(1, orDAO.delete(1, 1));
 	}
 }

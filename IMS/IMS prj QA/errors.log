@@ -1,30 +1,116 @@
-20201124 12:09:12 INFO  [main] ims.IMS IMS.java46 - What is your username
-20201124 12:09:15 INFO  [main] ims.IMS IMS.java48 - What is your password
-20201124 12:09:17 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
-20201124 12:09:17 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
-20201124 12:09:17 INFO  [main] ims.IMS IMS.java54 - Which entity would you like to use?
-20201124 12:09:17 INFO  [main] domain.Domain Domain.java27 - CUSTOMER: Information about customers
-20201124 12:09:17 INFO  [main] domain.Domain Domain.java27 - ITEM: Individual Items
-20201124 12:09:17 INFO  [main] domain.Domain Domain.java27 - ORDER_ITEMS: Purchases of items
-20201124 12:09:17 INFO  [main] domain.Domain Domain.java27 - ORDER: Purchases of items
-20201124 12:09:17 INFO  [main] domain.Domain Domain.java27 - STOP: To close the application
-20201124 12:09:22 INFO  [main] ims.IMS IMS.java81 - What would you like to do with order_items:
-20201124 12:09:22 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 12:09:22 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 12:09:22 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 12:09:22 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 12:09:22 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 12:09:28 INFO  [main] controller.OrderItemsController OrderItemsController.java36 - order_id:1 item_id:1 quantity:3 total_cost:224.97
-20201124 12:09:28 INFO  [main] controller.OrderItemsController OrderItemsController.java36 - order_id:2 item_id:2 quantity:2 total_cost:179.98
-20201124 12:09:28 INFO  [main] ims.IMS IMS.java81 - What would you like to do with order_items:
-20201124 12:09:28 INFO  [main] controller.Action Action.java38 - CREATE: To save a new entity into the database
-20201124 12:09:28 INFO  [main] controller.Action Action.java38 - READ: To read an entity from the database
-20201124 12:09:28 INFO  [main] controller.Action Action.java38 - UPDATE: To change an entity already in the database
-20201124 12:09:28 INFO  [main] controller.Action Action.java38 - DELETE: To remove an entity from the database
-20201124 12:09:28 INFO  [main] controller.Action Action.java38 - RETURN: To return to domain selection
-20201124 12:09:43 INFO  [main] ims.IMS IMS.java54 - Which entity would you like to use?
-20201124 12:09:43 INFO  [main] domain.Domain Domain.java27 - CUSTOMER: Information about customers
-20201124 12:09:43 INFO  [main] domain.Domain Domain.java27 - ITEM: Individual Items
-20201124 12:09:43 INFO  [main] domain.Domain Domain.java27 - ORDER_ITEMS: Purchases of items
-20201124 12:09:43 INFO  [main] domain.Domain Domain.java27 - ORDER: Purchases of items
-20201124 12:09:43 INFO  [main] domain.Domain Domain.java27 - STOP: To close the application
+20201125 14:26:36 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:36 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:37 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:37 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:38 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:38 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:40 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:40 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:40 DEBUG [main] dao.OrderDAO OrderDAO.java75 - java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`customerorders`.`orders`, CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`id`) REFERENCES `customers` (`id`))
+20201125 14:26:40 ERROR [main] dao.OrderDAO OrderDAO.java76 - Cannot add or update a child row: a foreign key constraint fails (`customerorders`.`orders`, CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`id`) REFERENCES `customers` (`id`))
+20201125 14:26:41 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:41 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:41 DEBUG [main] dao.OrderDAO OrderDAO.java114 - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`customerorders`.`order_items`, CONSTRAINT `order_items_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`))
+20201125 14:26:41 ERROR [main] dao.OrderDAO OrderDAO.java115 - Cannot delete or update a parent row: a foreign key constraint fails (`customerorders`.`order_items`, CONSTRAINT `order_items_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`))
+20201125 14:26:42 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:42 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:43 INFO  [main] controller.OrderController OrderController.java36 - order_id:1 customer_id:1
+20201125 14:26:43 INFO  [main] controller.OrderController OrderController.java46 - Please enter an order id
+20201125 14:26:43 INFO  [main] controller.OrderController OrderController.java48 - Please enter a customer id
+20201125 14:26:43 INFO  [main] controller.OrderController OrderController.java51 - Order created
+20201125 14:26:43 INFO  [main] controller.OrderController OrderController.java68 - Please enter the id of the order you would like to delete twice to confirm
+20201125 14:26:44 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:44 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:45 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:45 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:46 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:46 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:47 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:47 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:48 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:48 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:49 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:49 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:50 DEBUG [main] dao.CustomerDAO CustomerDAO.java127 - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`customerorders`.`orders`, CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`id`) REFERENCES `customers` (`id`))
+20201125 14:26:50 ERROR [main] dao.CustomerDAO CustomerDAO.java128 - Cannot delete or update a parent row: a foreign key constraint fails (`customerorders`.`orders`, CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`id`) REFERENCES `customers` (`id`))
+20201125 14:26:51 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:51 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:52 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:52 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:56 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:56 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:57 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:57 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:58 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:58 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:26:59 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:26:59 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:27:00 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:27:00 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:27:00 DEBUG [main] dao.ItemDAO ItemDAO.java128 - java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`customerorders`.`order_items`, CONSTRAINT `order_items_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `items` (`item_id`))
+20201125 14:27:00 ERROR [main] dao.ItemDAO ItemDAO.java129 - Cannot delete or update a parent row: a foreign key constraint fails (`customerorders`.`order_items`, CONSTRAINT `order_items_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `items` (`item_id`))
+20201125 14:27:01 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:27:01 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:27:02 INFO  [main] controller.CustomerController CustomerController.java36 - id:1 first name:jordan surname:harrison
+20201125 14:27:02 INFO  [main] controller.CustomerController CustomerController.java46 - Please enter a first name
+20201125 14:27:02 INFO  [main] controller.CustomerController CustomerController.java48 - Please enter a surname
+20201125 14:27:02 INFO  [main] controller.CustomerController CustomerController.java51 - Customer created
+20201125 14:27:02 INFO  [main] controller.CustomerController CustomerController.java78 - Please enter the id of the customer you would like to delete twice to confirm
+20201125 14:27:02 INFO  [main] controller.CustomerController CustomerController.java60 - Please enter the id of the customer you would like to update
+20201125 14:27:02 INFO  [main] controller.CustomerController CustomerController.java62 - Please enter a first name
+20201125 14:27:02 INFO  [main] controller.CustomerController CustomerController.java64 - Please enter a surname
+20201125 14:27:02 INFO  [main] controller.CustomerController CustomerController.java67 - Customer Updated
+20201125 14:27:02 DEBUG [main] utils.DBUtils DBUtils.java60 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:02 DEBUG [main] utils.DBUtils DBUtils.java60 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:02 DEBUG [main] utils.DBUtils DBUtils.java60 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:02 DEBUG [main] utils.DBUtils DBUtils.java60 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:02 DEBUG [main] dao.CustomerDAO CustomerDAO.java44 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:02 ERROR [main] dao.CustomerDAO CustomerDAO.java45 - Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:03 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:27:03 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:27:04 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:27:04 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:27:05 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:27:05 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:27:07 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:27:07 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:27:07 DEBUG [main] dao.OrderItemsDAO OrderItemsDAO.java77 - java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`customerorders`.`order_items`, CONSTRAINT `order_items_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`))
+20201125 14:27:07 ERROR [main] dao.OrderItemsDAO OrderItemsDAO.java78 - Cannot add or update a child row: a foreign key constraint fails (`customerorders`.`order_items`, CONSTRAINT `order_items_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`))
+20201125 14:27:08 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:27:08 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:27:09 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'cost'
+20201125 14:27:09 DEBUG [main] utils.DBUtils DBUtils.java55 - java.sql.SQLSyntaxErrorException: Duplicate column name 'total_cost'
+20201125 14:27:09 DEBUG [main] utils.DBUtils DBUtils.java60 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:09 DEBUG [main] utils.DBUtils DBUtils.java60 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:09 DEBUG [main] utils.DBUtils DBUtils.java60 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:09 DEBUG [main] utils.DBUtils DBUtils.java60 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:09 DEBUG [main] dao.ItemDAO ItemDAO.java45 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:09 ERROR [main] dao.ItemDAO ItemDAO.java46 - Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:09 INFO  [main] controller.OrderItemsController OrderItemsController.java36 - order_id:1 item_id:1 quantity:null total_cost:0.0
+20201125 14:27:09 INFO  [main] controller.OrderItemsController OrderItemsController.java46 - Please enter an order id
+20201125 14:27:09 INFO  [main] controller.OrderItemsController OrderItemsController.java48 - Please enter a item id
+20201125 14:27:09 INFO  [main] controller.OrderItemsController OrderItemsController.java50 - Please enter a quantity
+20201125 14:27:09 INFO  [main] controller.OrderItemsController OrderItemsController.java54 - Order created
+20201125 14:27:09 INFO  [main] controller.OrderItemsController OrderItemsController.java71 - Please enter the id of the order you would like to delete
+20201125 14:27:09 INFO  [main] controller.OrderItemsController OrderItemsController.java75 - Please enter the id of the item you would like to delete
+20201125 14:27:09 DEBUG [main] utils.DBUtils DBUtils.java60 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:10 DEBUG [main] utils.DBUtils DBUtils.java60 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:10 DEBUG [main] utils.DBUtils DBUtils.java60 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:10 DEBUG [main] utils.DBUtils DBUtils.java60 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:10 DEBUG [main] dao.CustomerDAO CustomerDAO.java44 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:10 ERROR [main] dao.CustomerDAO CustomerDAO.java45 - Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:10 DEBUG [main] utils.DBUtils DBUtils.java60 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:10 DEBUG [main] utils.DBUtils DBUtils.java60 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:10 DEBUG [main] utils.DBUtils DBUtils.java60 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:10 DEBUG [main] utils.DBUtils DBUtils.java60 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:10 DEBUG [main] dao.OrderDAO OrderDAO.java44 - java.sql.SQLException: Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:10 ERROR [main] dao.OrderDAO OrderDAO.java45 - Access denied for user 'root'@'109.154.108.136' (using password: YES)
+20201125 14:27:10 INFO  [main] controller.ItemController ItemController.java36 - id:1 product name:jordan item_price:4.34
+20201125 14:27:10 INFO  [main] controller.ItemController ItemController.java46 - Please enter a product name
+20201125 14:27:10 INFO  [main] controller.ItemController ItemController.java48 - Please enter a price
+20201125 14:27:10 INFO  [main] controller.ItemController ItemController.java51 - Item created
+20201125 14:27:10 INFO  [main] controller.ItemController ItemController.java78 - Please enter the id of the item you would like to delete twice to confirm
+20201125 14:27:10 INFO  [main] controller.ItemController ItemController.java60 - Please enter the id of the item you would like to update
+20201125 14:27:10 INFO  [main] controller.ItemController ItemController.java62 - Please enter a product name
+20201125 14:27:10 INFO  [main] controller.ItemController ItemController.java64 - Please enter a price
+20201125 14:27:10 INFO  [main] controller.ItemController ItemController.java67 - Item Updated
