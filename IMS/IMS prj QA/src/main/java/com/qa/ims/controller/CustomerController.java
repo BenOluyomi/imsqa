@@ -77,8 +77,8 @@ public class CustomerController implements CrudController<Customer> {
 	public int delete() {
 		LOGGER.info("Please enter the id of the customer you would like to delete twice to confirm");
 		Long id = utils.getLong();
-		Long item_id = utils.getItemId();
-		return customerDAO.delete(id,item_id);
+		//Long item_id = utils.getItemId();
+		return customerDAO.delete(id,id);
 	}
 
 }

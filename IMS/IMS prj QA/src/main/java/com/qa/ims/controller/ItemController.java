@@ -77,8 +77,8 @@ public class ItemController implements CrudController<Item> {
 	public int delete() {
 		LOGGER.info("Please enter the id of the item you would like to delete twice to confirm");
 		Long item_id = utils.getItemId();
-		Long order_id = utils.getOrderId();
-		return itemDAO.delete(item_id,order_id);
+		//Long order_id = utils.getOrderId();
+		return itemDAO.delete(item_id,item_id);
 	}
 
 }
