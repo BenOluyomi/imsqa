@@ -42,7 +42,7 @@ public class CustomerDAOTest {
 
 	@Test
 	public void testReadLatest() {
-		assertEquals(new Customer((long)3,"adam", "one"), custDAO.readLatest());
+		assertEquals(new Customer((long)2,"david", "stone"), custDAO.readLatest());
 	}
 
 	@Test
@@ -61,6 +61,6 @@ public class CustomerDAOTest {
 
 	@Test
 	public void testDelete() {
-		assertEquals((long)1, custDAO.delete((long)1,(long) 1));
+		assertEquals(1, custDAO.delete((long)1,(long) 1));
 	}
 }

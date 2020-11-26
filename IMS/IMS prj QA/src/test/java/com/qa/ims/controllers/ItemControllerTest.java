@@ -33,10 +33,14 @@ public class ItemControllerTest {
 	public void testCreate() {
 		final Item created = new Item("shoes", (float)18.65);
 
+		Mockito.when(utils.getString()).thenReturn("shoes");
+		Mockito.when(utils.getItemPrice()).thenReturn((float)18.65);
 		Mockito.when(dao.create(created)).thenReturn(created);
 
 		assertEquals(created, controller.create());
-
+		
+		Mockito.verify(utils, Mockito.times(1)).getString();
+		Mockito.verify(utils, Mockito.times(1)).getItemPrice();
 		Mockito.verify(dao, Mockito.times(1)).create(created);
 	}
 
@@ -56,14 +60,14 @@ public class ItemControllerTest {
 	public void testUpdate() {
 		Item updated = new 	Item((long)1, "chocolate", (float) 8.34);
 
-		Mockito.when(this.utils.getLong()).thenReturn((long)1);
+		Mockito.when(this.utils.getItemId()).thenReturn((long)1);
 		Mockito.when(this.utils.getString()).thenReturn(updated.getProductName());
 		Mockito.when(this.utils.getItemPrice()).thenReturn(updated.getPrice());
 		Mockito.when(this.dao.update(updated)).thenReturn(updated);
 
 		assertEquals(updated, this.controller.update());
 
-		Mockito.verify(this.utils, Mockito.times(1)).getLong();
+		Mockito.verify(this.utils, Mockito.times(1)).getItemId();
 		Mockito.verify(this.utils, Mockito.times(1)).getString();
 		Mockito.verify(this.utils, Mockito.times(1)).getItemPrice();
 		Mockito.verify(this.dao, Mockito.times(1)).update(updated);

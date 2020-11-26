@@ -31,10 +31,12 @@ public class OrderItemControllerTest {
 
 	@Test
 	public void testCreate() {
-		final Long customer_id = (long) 1, order_id =(long) 1;
-		final OrderItems created = new OrderItems(order_id, customer_id, order_id, order_id);
+		final OrderItems created = new OrderItems((long)3, (long)4, (long)1,(float)74.99);
 
-		Mockito.when(utils.getLong()).thenReturn(order_id);
+		Mockito.when(utils.getOrderId()).thenReturn((long)3);
+		Mockito.when(utils.getItemId()).thenReturn((long)1);
+		Mockito.when(utils.getQuantity()).thenReturn((long)1);
+		Mockito.when(utils.getItemPrice()).thenReturn((float)74.99);
 		Mockito.when(dao.create(created)).thenReturn(created);
 
 		assertEquals(created, controller.create());
@@ -46,8 +48,8 @@ public class OrderItemControllerTest {
 	@Test
 	public void testReadAll() {
 		List<OrderItems> orders = new ArrayList<>();
-		orders.add(new OrderItems((long)1, (long)1, null, 0));
-
+		orders.add(new OrderItems((long)1, (long)1, (long)3, (float)224.97));
+		orders.add(new OrderItems((long)2, (long)2, (long)2, (float)179.98));
 		Mockito.when(dao.readAll()).thenReturn(orders);
 
 		assertEquals(orders, controller.readAll());
@@ -60,7 +62,8 @@ public class OrderItemControllerTest {
 		OrderItems updated = new OrderItems((long)2,(long)2, null, 0);
 
 		Mockito.when(this.utils.getOrderId()).thenReturn((long) 1,(long)1);
-		Mockito.when(this.utils.getOrderId()).thenReturn(updated.getOrderId(),updated.getItemId());
+		Mockito.when(this.utils.getItemId()).thenReturn(updated.getItemId());
+		Mockito.when(this.utils.getItemId()).thenReturn(updated.getOrderId(),updated.getItemId());
 		Mockito.when(this.dao.update(updated)).thenReturn(updated);
 
 		assertEquals(updated, this.controller.update());
@@ -77,9 +80,9 @@ public class OrderItemControllerTest {
 		Mockito.when(utils.getLong()).thenReturn(order_id);
 		Mockito.when(dao.delete(order_id, order_id)).thenReturn(1);
 
-		assertEquals(1L, this.controller.delete());
+		assertEquals(1, this.controller.delete());
 
-		Mockito.verify(utils, Mockito.times(1)).getLong();
+		Mockito.verify(utils, Mockito.times(1)).getItemId();
 		Mockito.verify(dao, Mockito.times(1)).delete(order_id, order_id);
 	}
 

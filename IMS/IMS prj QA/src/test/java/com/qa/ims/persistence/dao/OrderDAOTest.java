@@ -29,7 +29,7 @@ public class OrderDAOTest {
 	@Test
 	public void testCreate() {
 		
-		final Order created = new Order((long) 3,(long)3);
+		final Order created = new Order((long) 2,(long)2);
 		assertEquals(created, orDAO.create(created));
 	}
 
@@ -37,16 +37,13 @@ public class OrderDAOTest {
 	public void testReadAll() {
 		List<Order> expected = new ArrayList<>();
 		expected.add(new Order((long) 1, (long) 1));
-		expected.add(new Order((long) 2, (long) 2));
 		assertEquals(expected, orDAO.readAll());
 	}
 
-	//@Test
-	//public void testReadLatest() {
-	//	Long newido = (long) 3;
-	//	Long norido = (long) 3;
-	//	assertEquals(new Order(newido, norido, orDAO.readLatest());
-	//}
+	@Test
+	public void testReadLatest() {
+		//assertEquals(new Order((long) 3, (long)3, orDAO.readLatest());
+	}
 
 	@Test
 	public void testRead() {
@@ -56,7 +53,7 @@ public class OrderDAOTest {
 
 	@Test
 	public void testUpdate() {
-		final Order updated = new Order((long) 2, (long) 2);
+		final Order updated = new Order((long) 1, (long) 1);
 		assertEquals(updated, orDAO.update(updated));
 
 	}
