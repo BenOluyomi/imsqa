@@ -7,11 +7,11 @@ public class OrderItems{
 	private Long quantity;
 	private float total_cost;
 
-	public OrderItems(Long order_id, Long item_id, Long quantity, float total_cost) {
+	public OrderItems(Long order_id, Long item_id, Long quantity) {
 		this.order_id = order_id;
 		this.item_id = item_id;
 		this.quantity = quantity;
-		this.total_cost = total_cost;
+		//this.total_cost = total_cost;
 		
 	}
 

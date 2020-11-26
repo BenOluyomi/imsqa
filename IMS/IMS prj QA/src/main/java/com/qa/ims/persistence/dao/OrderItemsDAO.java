@@ -10,6 +10,7 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.qa.ims.persistence.domain.Item;
 import com.qa.ims.persistence.domain.OrderItems;
 import com.qa.ims.utils.DBUtils;
 
@@ -24,7 +25,7 @@ public class OrderItemsDAO implements Dao<OrderItems> {
 		Long quantity = resultSet.getLong("quantity");
 		float total_cost = resultSet.getFloat("total_cost");
 	
-		return new OrderItems(order_id, item_id, quantity,total_cost);
+		return new OrderItems(order_id, item_id, quantity);
 	}
 
 	/**
@@ -100,7 +101,17 @@ public class OrderItemsDAO implements Dao<OrderItems> {
 	 *                 update that customer in the database
 	 * @return
 	 */
-
+	public OrderItems update(OrderItems order) {
+		try (Connection connection = DBUtils.getInstance().getConnection();
+				Statement statement = connection.createStatement();) {
+			statement.executeUpdate("update order_items set item_id ='" + order.getItemId() + "' where order_id =" + order.getOrderId());
+			return readOrder(order.getItemId());
+		} catch (Exception e) {
+			LOGGER.debug(e);
+			LOGGER.error(e.getMessage());
+		}
+		return null;
+	}
 
 	/**
 	 * Deletes a customer in the database
@@ -120,10 +131,6 @@ public class OrderItemsDAO implements Dao<OrderItems> {
 		return 0;
 	}
 
-	@Override
-	public OrderItems update(OrderItems t) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 }

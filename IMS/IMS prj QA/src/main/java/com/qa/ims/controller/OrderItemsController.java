@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.qa.ims.persistence.dao.OrderItemsDAO;
+import com.qa.ims.persistence.domain.Item;
 import com.qa.ims.persistence.domain.OrderItems;
 import com.qa.ims.utils.Utils;
 
@@ -49,8 +50,8 @@ public class OrderItemsController implements CrudController<OrderItems> {
 		Long item_id = utils.getfId();
 		LOGGER.info("Please enter a quantity");
 		Long quantity = utils.getQuantity();
-		float total_cost = utils.getItemPrice();
-		OrderItems orderItems = orderItDAO.create(new OrderItems(order_id, item_id,quantity, total_cost));
+		//float total_cost = utils.getItemPrice()*utils.getQuantity();
+		OrderItems orderItems = orderItDAO.create(new OrderItems(order_id, item_id,quantity));
 		LOGGER.info("Order created");
 		return orderItems;
 	}
@@ -58,8 +59,19 @@ public class OrderItemsController implements CrudController<OrderItems> {
 	/**
 	 * Updates an existing customer by taking in user input
 	 */
+	public OrderItems update() {
+		LOGGER.info("Please enter the id of the order you would like to update");
+		Long order_id = utils.getOrderId();
+		LOGGER.info("Please enter a item id");
+		Long item_id = utils.getItemId();
+		LOGGER.info("Please enter a quantity");
+		Long quantity= utils.getQuantity();
+		OrderItems orderitem = orderItDAO.update(new OrderItems(order_id, item_id, quantity));
+		LOGGER.info("Item Updated");
+		return orderitem;
+	}
 
-
+	
 
 	/**
 	 * Deletes an existing customer by the id of the customer
@@ -81,10 +93,6 @@ public class OrderItemsController implements CrudController<OrderItems> {
 		
 	}
 
-	@Override
-	public OrderItems update() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 }

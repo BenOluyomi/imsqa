@@ -31,7 +31,7 @@ public class OrderItemControllerTest {
 
 	@Test
 	public void testCreate() {
-		final OrderItems created = new OrderItems((long)3, (long)4, (long)1,(float)74.99);
+		final OrderItems created = new OrderItems((long)3, (long)4, (long)1);
 
 		Mockito.when(utils.getOrderId()).thenReturn((long)3);
 		Mockito.when(utils.getItemId()).thenReturn((long)1);
@@ -48,8 +48,8 @@ public class OrderItemControllerTest {
 	@Test
 	public void testReadAll() {
 		List<OrderItems> orders = new ArrayList<>();
-		orders.add(new OrderItems((long)1, (long)1, (long)3, (float)224.97));
-		orders.add(new OrderItems((long)2, (long)2, (long)2, (float)179.98));
+		orders.add(new OrderItems((long)1, (long)1, (long)3));
+		orders.add(new OrderItems((long)2, (long)2, (long)2));
 		Mockito.when(dao.readAll()).thenReturn(orders);
 
 		assertEquals(orders, controller.readAll());
@@ -59,7 +59,7 @@ public class OrderItemControllerTest {
 
 	@Test
 	public void testUpdate() {
-		OrderItems updated = new OrderItems((long)2,(long)2, null, 0);
+		OrderItems updated = new OrderItems((long)2,(long)2, null);
 
 		Mockito.when(this.utils.getOrderId()).thenReturn((long) 1,(long)1);
 		Mockito.when(this.utils.getItemId()).thenReturn(updated.getItemId());

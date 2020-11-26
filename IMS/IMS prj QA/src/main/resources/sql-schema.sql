@@ -34,10 +34,3 @@ CREATE TABLE IF NOT EXISTS `customerorders`.`order_items` (
     
 );
 
-alter table order_items add cost decimal(10,2);
-
-
-update order_items set cost = ( select item_price from items where order_items.item_id = items.item_id);
-
-alter table order_items add total_cost decimal(10,2);
-update order_items set total_cost = quantity*cost;

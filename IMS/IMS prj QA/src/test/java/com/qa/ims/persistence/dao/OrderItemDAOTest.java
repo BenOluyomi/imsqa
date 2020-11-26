@@ -28,7 +28,7 @@ public class OrderItemDAOTest {
 
 	@Test
 	public void testCreate() {
-		final OrderItems created = new OrderItems((long)2,(long)2, (long)2, (float) 179.98);
+		final OrderItems created = new OrderItems((long)2,(long)2, (long)2);
 		assertEquals(created, orDAO.create(created));
 	}
 
@@ -37,25 +37,25 @@ public class OrderItemDAOTest {
 		List<OrderItems> expected = new ArrayList<>();
 		Long newida = (long) 1;
 		Long norida = (long) 1;
-		expected.add(new OrderItems(newida, norida, (long) 3, (float) 224.97));
+		expected.add(new OrderItems(newida, norida, (long) 3));
 		assertEquals(expected, orDAO.readAll());
 	}
 
 	@Test
 	public void testReadLatest() {
 		
-		assertEquals(new OrderItems((long)1, (long)1,(long)3,(float) 224.97), orDAO.readLatest());
+		assertEquals(new OrderItems((long)1, (long)1,(long)3), orDAO.readLatest());
 	}
 
 	@Test
 	public void testRead() {
 		final long ID = 1;
-		assertEquals(new OrderItems(ID, (long) 1, ID, ID), orDAO.readOrder(ID));
+		assertEquals(new OrderItems(ID, (long) 1, ID), orDAO.readOrder(ID));
 	}
 
 	@Test
 	public void testUpdate() {
-		final OrderItems updated = new OrderItems((long) 1, (long) 2, (long) 2,(float)179.98);
+		final OrderItems updated = new OrderItems((long) 1, (long) 2, (long) 2);
 		assertEquals(updated, orDAO.update(updated));
 
 	}
