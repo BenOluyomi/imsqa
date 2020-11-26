@@ -56,10 +56,14 @@ Explain how to run the automated tests for this system. Break down into which te
 
 ### Unit Tests 
 
-Explain what these tests test, why and how to run them
+These tests test the classes in the src/main folder and they are there to ensure that everything wrtten on the development side is working as is it should for each class. For example the code below would be testing the create function for the customer class.
 
 ```
-Give an example
+@Test
+	public void testCreate() {
+		final Customer created = new Customer((long)3,"adam", "one");
+		assertEquals(created, custDAO.create(created));
+	}
 ```
 
 ### Integration Tests 
@@ -92,6 +96,7 @@ We use [SemVer](http://semver.org/) for versioning.
 ## Authors
 
 * **Chris Perrins** - *Initial work* - [christophperrins](https://github.com/christophperrins)
+* **Benjamin Oluyomi** 
 
 ## License
 
@@ -99,8 +104,4 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 
 *For help in [Choosing a license](https://choosealicense.com/)*
 
-## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
