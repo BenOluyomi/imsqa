@@ -13,15 +13,6 @@ These tables each have a CRUD functionality (Create, Read, Update and Delete) wh
 
 ## Getting Started
 
-After forking or downloading the files, navigate to the targer folder in this folder are the .jar files required to and open a CLI, either the native cmd or in git bash. Type 
-```
-'ls'
-```
- to verify that the "ims-0.0.1-jar-with-dependencies" is in the folder. To run the jar file and execute the program type 
-
-```
-'java -jar ims-0.0.1-jar-with-dependencies' and the program should begin if the gcp instance is up.
-```
 ### Prerequisites
 
 What things you need to install the software and how to install them
@@ -37,22 +28,43 @@ https://maven.apache.org/install.html
 https://maven.apache.org/download.cgi?Preferred=ftp://ftp.osuosl.org/pub/apache/
 The links above contain instructions on how to install maven followed by the download link itself.
 
-available from
 
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+After forking or downloading the files, navigate to the targer folder in this folder are the .jar files required to and open a CLI, either the native cmd or in git bash. Type 
+```
+'ls'
+```
+ to verify that the "ims-0.0.1-jar-with-dependencies" is in the folder. To run the jar file and execute the program type 
 
-Download the Eclispse IDE from this link https://www.eclipse.org/downloads/
-Then natvigate to your downloads folder and double click to run the .exe file.
+```
+'java -jar ims-0.0.1-jar-with-dependencies' and the program should begin if the gcp instance is up.
+```
 
-
-End with an example of getting some data out of the system or using it for a little demo
-
+To test some basic functionality is working, after entering the username and password for the server type;
+```
+customer
+```
+```
+read
+```
+This should display the people already in the customer list...
+```
+create
+```
+```
+Steven
+```
+```
+Jacobs
+```
+This will add a new person called Steven Jacobs to the customer database
+```
+read
+```
+Now Steve Jacobs should be shown as another customer in a database
 ## Running the tests
-
-Explain how to run the automated tests for this system. Break down into which tests and what they do
 
 ### Unit Tests 
 
@@ -83,7 +95,7 @@ Give an example
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+This can be deployed ona live system using the .jar files provided in the target folder.
 
 ## Built With
 
