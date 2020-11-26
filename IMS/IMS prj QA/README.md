@@ -1,35 +1,52 @@
-Coverage: 34%
+Coverage of src/main: 65.1%
 # Project Title
 
-One Paragraph of project description goes here
+This project is about the creation of an IMS(Integrated Management System), specifically based around a customer ordering system. 
+This project works through interacting with a CLI to manipulate data within a SQL database inside of a GCP instance. Within the database there are the following datables;
+
+- customers
+- orders
+- order_items
+- items
+
+These tables each have a CRUD functionality (Create, Read, Update and Delete) where you can delete orders, customers, items from orders and items themselves. You can also update these values throught the update functionality and the changes will be relflected in the MySQL database.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+After forking or downloading the files, navigate to the targer folder in this folder are the .jar files required to and open a CLI, either the native cmd or in git bash. Type 
+```
+'ls'
+```
+ to verify that the "ims-0.0.1-jar-with-dependencies" is in the folder. To run the jar file and execute the program type 
 
+```
+'java -jar ims-0.0.1-jar-with-dependencies' and the program should begin if the gcp instance is up.
+```
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
-```
-Give examples
-```
+IDE compatible with Java 
+https://www.eclipse.org/downloads/
+The link above will transport you to the download page for a Java IDE called Eclipse.
+
+
+Maven installation
+https://maven.apache.org/install.html
+
+https://maven.apache.org/download.cgi?Preferred=ftp://ftp.osuosl.org/pub/apache/
+The links above contain instructions on how to install maven followed by the download link itself.
+
+available from
+
 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+Download the Eclispse IDE from this link https://www.eclipse.org/downloads/
+Then natvigate to your downloads folder and double click to run the .exe file.
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
 
 End with an example of getting some data out of the system or using it for a little demo
 
