@@ -17,6 +17,8 @@ These tables each have a CRUD functionality (Create, Read, Update and Delete) wh
 
 What things you need to install the software and how to install them
 
+A Java version of 14.0.2 or higher is recommended
+
 IDE compatible with Java 
 https://www.eclipse.org/downloads/
 The link above will transport you to the download page for a Java IDE called Eclipse.
@@ -28,8 +30,15 @@ https://maven.apache.org/install.html
 https://maven.apache.org/download.cgi?Preferred=ftp://ftp.osuosl.org/pub/apache/
 The links above contain instructions on how to install maven followed by the download link itself.
 
+In order to rebuild the jar files to run, the following cammands need to be input into the a cli where your pom.xml files is located.
 
-
+```
+mvn clean 
+```
+```
+mvn install 
+```
+this should provide you with the jar files in your directory.
 ### Installing
 
 After forking or downloading the files, navigate to the targer folder in this folder are the .jar files required to and open a CLI, either the native cmd or in git bash. Type 
@@ -79,19 +88,15 @@ These tests test the classes in the src/main folder and they are there to ensure
 ```
 
 ### Integration Tests 
-Explain what these tests test, why and how to run them
+Integration tests are performed to highlight imperfections in the interactions between different entities integrated within a system, or between systems. Integration tests typically focus on the interface between modules and the transfer of information between them.
 
-```
-Give an example
-```
+For example for a website when a user logs in they ought to be directed to a home page, the test would verify that the link between the home page and login page is functional.
+
 
 ### And coding style tests
 
 Explain what these tests test and why
 
-```
-Give an example
-```
 
 ## Deployment
 
